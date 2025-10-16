@@ -1,0 +1,28 @@
+# Enhanced Sales Pipeline - Additional Requirements
+# Install all improvements features
+
+# Base requirements
+anthropic>=0.39.0
+pyyaml>=6.0.1
+requests>=2.31.0
+
+# Web automation (Improvement #4 - Serviceability checking)
+selenium>=4.15.0
+webdriver-manager>=4.0.1
+
+# Dashboard (Improvement #2 - Real-time monitoring)
+flask>=3.0.0
+flask-socketio>=5.3.0
+
+# Optional: Advanced analytics (Improvement #7)
+# pandas>=2.1.0
+# numpy>=1.24.0
+# scipy>=1.11.0
+
+# Optional: Email with advanced features (Improvement #5)
+# email-validator>=2.1.0
+
+# Optional: Data visualization for dashboard
+# plotly>=5.18.0
+
+# All improvements work with Python 3.9+

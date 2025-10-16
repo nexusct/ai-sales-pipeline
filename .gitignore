@@ -1,0 +1,150 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.vscode-insiders/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# API Keys and Config
+.claude.json
+.claude.json.backup
+.claude/
+.config/
+.cache/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+AppData/
+Application Data
+Cookies
+Local Settings
+My Documents
+NetHood
+PrintHood
+Recent
+SendTo
+Start Menu
+Templates
+
+# User-specific directories
+.ssh/
+.azure/
+.docker/
+.cursor/
+.ollama/
+.ghcp-appmod-java/
+.lmstudio/
+.lmstudio-home-pointer
+.ms-ad/
+.blackbox-editor/
+.codex/
+.dotnet/
+.templateengine/
+.local/
+.monica-code/
+.mcp-auth/
+.pdf-filler-profiles/
+.aitk/
+.abdm/
+
+# User directories
+Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
+Contacts/
+Favorites/
+Links/
+OneDrive/
+Saved Games/
+Searches/
+Intel/
+ansel/
+Pickleball/
+WebPlugins/
+
+# Node modules (if any JS projects exist)
+node_modules/
+package-lock.json
+
+# Test and temporary files
+test_*.py
+*_test.py
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Project-specific
+IMPROVEMENTS_SUMMARY.md
+run_example_*.py
+test_pipeline.py
+run_enhanced_pipeline.py

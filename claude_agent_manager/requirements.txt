@@ -1,0 +1,16 @@
+# Claude Agent Manager Requirements
+
+# Anthropic Claude API
+anthropic>=0.39.0
+
+# Async support
+asyncio>=3.4.3
+
+# Configuration management
+pyyaml>=6.0.1
+
+# Logging (included in Python standard library)
+# No additional package needed
+
+# Type hints (included in Python 3.5+)
+# No additional package needed
