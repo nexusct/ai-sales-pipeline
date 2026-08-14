@@ -43,5 +43,11 @@ Hooks will run automatically on every commit.
 
 ## Incident history
 
+- **2026-07-29** — Google API key exposure in pre-commit config (NCT-SEC-2026-07-29-001).
+  The anti-leak hook embedded a live Google API key (`AIzaSyAd72xUaF049-dbkwTAfSvsjQhmp9YLDpk`) as a grep literal in `.pre-commit-config.yaml`.
+  **STATUS**: Key removed from current files in commit 27de066. Key remains in git history.
+  **ACTION REQUIRED**: Owner must rotate this key immediately at https://console.cloud.google.com/apis/credentials
+  After rotation, revoke the exposed key to prevent unauthorized use.
+
 - **2026-04-19** — Credential exposure incident (NCT-SEC-2026-04-19-001).
   Rotated: Google Maps API key, admin password. Full report on file.
