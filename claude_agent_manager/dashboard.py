@@ -38,7 +38,13 @@ class DashboardServer:
         self.port = port
 
         self.app = Flask(__name__)
-        self.app.config['SECRET_KEY'] = 'sales-pipeline-secret'
+        # Use secure random secret key from environment or generate one
+        secret_key = os.environ.get('FLASK_SECRET_KEY')
+        if not secret_key:
+            import secrets
+            secret_key = secrets.token_hex(32)
+            print("WARNING: Using generated Flask SECRET_KEY. Set FLASK_SECRET_KEY environment variable for production.")
+        self.app.config['SECRET_KEY'] = secret_key
         self.socketio = SocketIO(self.app, cors_allowed_origins="*")
 
         self.metrics = {

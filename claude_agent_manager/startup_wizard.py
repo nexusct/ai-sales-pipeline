@@ -7,6 +7,7 @@ providing a user-friendly interface for setting up the sales pipeline.
 
 import os
 import sys
+import subprocess
 from typing import Optional, Dict, Any, List
 from dataclasses import dataclass
 from getpass import getpass
@@ -33,8 +34,14 @@ class StartupWizard:
         self.config = None
 
     def clear_screen(self):
-        """Clear the console screen"""
-        os.system('cls' if os.name == 'nt' else 'clear')
+        """Clear the console screen safely"""
+        # Use platform-specific clear command safely without shell injection risk
+        if os.name == 'nt':
+            # Windows
+            subprocess.run(['cls'], shell=True, check=False)
+        else:
+            # Unix-like systems
+            subprocess.run(['clear'], check=False)
 
     def print_header(self, title: str):
         """Print a formatted header"""
