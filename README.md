@@ -103,6 +103,23 @@ The system uses 7 specialized AI agents:
 
 ## Configuration
 
+### Environment Setup
+
+**IMPORTANT: Never hardcode credentials in your code!**
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` with your actual credentials:
+   ```bash
+   # Open in your editor
+   nano .env  # or vim, code, etc.
+   ```
+
+3. The `.env` file is already in `.gitignore` - it will never be committed to git.
+
 The wizard collects all configuration automatically. For advanced users, you can also set environment variables:
 
 ```bash
@@ -111,6 +128,15 @@ export MAX_CONCURRENT_TASKS="5"
 export RATE_LIMIT_PER_MINUTE="50"
 export LOG_LEVEL="INFO"
 ```
+
+### Security Best Practices
+
+- **Never commit** API keys, passwords, or tokens to git
+- **Always use** environment variables or `.env` files (which are gitignored)
+- **Rotate keys** regularly and immediately if exposed
+- **Use different keys** for development vs production
+- **Monitor API usage** for unauthorized access
+- See `.env.example` for all available configuration options
 
 ## Documentation
 
@@ -171,6 +197,14 @@ print(opportunity.outreach_message)
 
 **Important Legal & Ethical Requirements:**
 
+### Credentials Management
+- ✅ **ALWAYS**: Store API keys in environment variables or `.env` files
+- ✅ **ALWAYS**: Use the provided `.env.example` as a template
+- ✅ **ALWAYS**: Rotate keys immediately if exposed
+- ❌ **NEVER**: Hardcode credentials in code
+- ❌ **NEVER**: Commit `.env` files or credentials to git
+
+### Data Sources
 - ✅ **ALLOWED**: Official APIs (LinkedIn Sales Navigator API, Apollo.io API, CRM)
 - ✅ **ALLOWED**: Data you own or have legitimate access to
 - ✅ **ALLOWED**: Publicly available business information
@@ -179,15 +213,17 @@ print(opportunity.outreach_message)
 - ❌ **NOT ALLOWED**: Bulk harvesting without authorization
 
 ### Portal Access
-- Use only authorized credentials
-- Automate with proper business authorization
-- No unauthorized access or credential sharing
+- ✅ **ALLOWED**: Use only authorized credentials
+- ✅ **ALLOWED**: Automate with proper business authorization
+- ❌ **NOT ALLOWED**: Unauthorized access or credential sharing
 
 ### Outreach Compliance
-- Comply with CAN-SPAM Act
-- Respect GDPR, CCPA privacy regulations
-- Honor opt-outs and unsubscribe requests
-- Use legitimate business contact information
+- ✅ **REQUIRED**: Comply with CAN-SPAM Act
+- ✅ **REQUIRED**: Respect GDPR, CCPA privacy regulations
+- ✅ **REQUIRED**: Honor opt-outs and unsubscribe requests
+- ✅ **REQUIRED**: Use legitimate business contact information
+
+For security issues, see [SECURITY.md](SECURITY.md)
 
 ## API Validation
 
